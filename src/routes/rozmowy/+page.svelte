@@ -69,41 +69,47 @@ Każde zdanie w cudzysłowie jeśli to bezpośrednia wypowiedź.`
 	<title>Trudne rozmowy — Bliżej</title>
 </svelte:head>
 
-<div class="max-w-lg mx-auto px-6 py-10">
+<div class="max-w-4xl mx-auto px-6 py-10">
 	<a href="/" class="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 mb-8">
 		← Wstecz
 	</a>
 
-	<h1 class="text-2xl font-bold tracking-tight mb-2">Trudne rozmowy</h1>
-	<p class="text-muted-foreground text-sm mb-8">Jak mówić — i jak nie mówić. Scenariusze krok po kroku.</p>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+		<!-- Lewa kolumna: Trudne rozmowy -->
+		<div>
+			<span class="text-xs uppercase tracking-widest text-muted-foreground font-medium">Scenariusze</span>
+		<h1 class="text-2xl font-bold tracking-tight mb-2 mt-1">Trudne rozmowy</h1>
+			<p class="text-muted-foreground text-sm mb-8">Jak mówić — i jak nie mówić. Scenariusze krok po kroku.</p>
 
-	<nav aria-label="Lista scenariuszy rozmów">
-		<ul class="space-y-3 mb-10">
-			{#each rozmowy as rozmowa}
-				<li>
-					<a
-						href="/rozmowy/{rozmowa.id}"
-						class="block p-5 rounded-xl border border-border hover:border-primary/50 hover:bg-secondary/50 transition-all group"
-					>
-						<div class="flex items-center justify-between gap-4">
-							<div>
-								<p class="font-semibold text-base group-hover:text-primary transition-colors">
-									{rozmowa.tytul}
-								</p>
-								<p class="text-sm text-muted-foreground mt-1">{rozmowa.opis}</p>
-							</div>
-							<span aria-hidden="true" class="text-muted-foreground shrink-0">→</span>
-						</div>
-					</a>
-				</li>
-			{/each}
-		</ul>
-	</nav>
+			<nav aria-label="Lista scenariuszy rozmów">
+				<ul class="space-y-3">
+					{#each rozmowy as rozmowa}
+						<li>
+							<a
+								href="/rozmowy/{rozmowa.id}"
+								class="block p-5 rounded-xl border border-border hover:border-primary/50 hover:bg-secondary/50 transition-all group"
+							>
+								<div class="flex items-center justify-between gap-4">
+									<div>
+										<p class="font-semibold text-base group-hover:text-primary transition-colors">
+											{rozmowa.tytul}
+										</p>
+										<p class="text-sm text-muted-foreground mt-1">{rozmowa.opis}</p>
+									</div>
+									<span aria-hidden="true" class="text-muted-foreground shrink-0">→</span>
+								</div>
+							</a>
+						</li>
+					{/each}
+				</ul>
+			</nav>
+		</div>
 
-	<div class="border-t border-border pt-8">
+		<!-- Prawa kolumna: Własny temat -->
+		<div>
 		<div class="mb-5">
 			<span class="text-xs uppercase tracking-widest text-muted-foreground font-medium">AI</span>
-			<h2 class="text-lg font-semibold mt-1">Własny temat rozmowy</h2>
+			<h2 class="text-2xl font-bold mt-1">Własny temat rozmowy</h2>
 			<p id="ai-desc" class="text-sm text-muted-foreground mt-1">
 				Opisz sytuację — AI podpowie jak rozmawiać.
 			</p>
@@ -165,5 +171,6 @@ Każde zdanie w cudzysłowie jeśli to bezpośrednia wypowiedź.`
 				</div>
 			{/if}
 		</div>
-	</div>
+		</div><!-- koniec prawej kolumny -->
+	</div><!-- koniec grid -->
 </div>
