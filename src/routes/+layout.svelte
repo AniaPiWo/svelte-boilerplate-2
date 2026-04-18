@@ -19,4 +19,45 @@
 	Przejdź do treści
 </a>
 
-{@render children()}
+<header class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+	<a href="/" class="flex items-center gap-2">
+		<svg viewBox="0 0 40 24" height="32" width="54" aria-hidden="true" fill="none">
+			<circle cx="14" cy="12" r="11" stroke="var(--color-foreground)" stroke-width="1.8" />
+			<circle cx="24" cy="12" r="11" fill="var(--color-primary)" />
+		</svg>
+		<span class="text-xl font-semibold tracking-tight text-primary">Bliżej</span>
+	</a>
+	<nav aria-label="Główna nawigacja" class="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
+		<a href="/etapy" class="hover:text-foreground transition-colors">Etapy</a>
+		<a href="/rozmowy" class="hover:text-foreground transition-colors">Rozmowy</a>
+		<a href="/depresja" class="hover:text-foreground transition-colors">Depresja</a>
+		<a href="/konwerter" class="hover:text-foreground transition-colors">Tłumacz AI</a>
+	</nav>
+	<a
+		href="/etapy"
+		class="rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground shadow-sm transition hover:opacity-90"
+	>
+		Zacznij
+	</a>
+</header>
+
+<main id="main-content" class="">
+	{@render children()}
+</main>
+
+<footer class="border-t border-border bg-card">
+	<div
+		class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-6 text-sm text-muted-foreground md:flex-row"
+	>
+		<div class="flex items-center gap-2">
+			<svg viewBox="0 0 40 24" height="22" width="37" aria-hidden="true" fill="none">
+				<circle cx="14" cy="12" r="11" stroke="var(--color-foreground)" stroke-width="1.8" />
+				<circle cx="24" cy="12" r="11" fill="var(--color-primary)" />
+			</svg>
+			<span>© {new Date().getFullYear()} Bliżej</span>
+		</div>
+		<a href="tel:226350954" class="hover:text-foreground transition-colors">
+			Telefon Zaufania: 22 635 09 54
+		</a>
+	</div>
+</footer>
