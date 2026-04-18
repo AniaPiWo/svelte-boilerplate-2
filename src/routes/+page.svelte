@@ -73,10 +73,11 @@
 
 		<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
 			{#each [
-				{ num: '01', title: 'Etapy starzenia', desc: '60+, 75+, 85+ — zmiany fizyczne, psychiczne i czerwone flagi samotności.', href: '/etapy' },
-				{ num: '02', title: 'Trudne rozmowy', desc: 'Samotność, rezygnacja z auta, przeprowadzka do DPS — jak mówić, a jak nie.', href: '/rozmowy' },
-				{ num: '03', title: 'Depresja u seniora', desc: 'Checklist objawów i konkretne kroki, które możesz zrobić dziś.', href: '/depresja' },
-				{ num: '04', title: 'Tłumacz dla seniora', desc: 'Napisz co chcesz powiedzieć — AI przepisze to na język zrozumiały dla Twojego bliskiego.', href: '/konwerter' }
+	
+				{ num: '01', title: 'Trudne rozmowy', desc: 'Samotność, rezygnacja z auta, przeprowadzka do DPS — jak mówić, a jak nie.', href: '/rozmowy' },
+				{ num: '02', title: 'Tłumacz dla seniora', desc: 'Napisz co chcesz powiedzieć — AI przepisze to na język zrozumiały dla Twojego bliskiego.', href: '/konwerter' },
+				{ num: '03', title: 'Edukacja - Etapy starzenia', desc: '60+, 75+, 85+ — zmiany fizyczne, psychiczne i czerwone flagi samotności.', href: '/etapy' },	
+				{ num: '04', title: 'Depresja u seniora', desc: 'Checklist objawów i konkretne kroki, które możesz zrobić dziś.', href: '/depresja' },
 			] as card}
 				<a
 					href={card.href}
