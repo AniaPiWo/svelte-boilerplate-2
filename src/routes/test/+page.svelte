@@ -20,7 +20,7 @@
 </script>
 
 <main class="mx-auto max-w-lg p-8">
-	<h1 class="mb-6 text-2xl font-bold">Test Convex</h1>
+	<h1 class="mb-6 text-2xl font-bold">Test Convex parostatkiem w piekny rejs</h1>
 
 	<form onsubmit={handleSubmit} class="mb-8 flex flex-col gap-3">
 		<input
